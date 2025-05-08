@@ -56,11 +56,11 @@
 
         layer1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&soft_off       &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &mmv MOVE_UP     &trans         &trans       &trans         &trans         &trans             &trans
+&sys_reset      &trans            &mkp LCLK        &mkp MCLK     &mkp RCLK   &mkp MB4          &mmv MOVE_DOWN   &kp BACKSPACE  &kp HOME     &kp UP         &kp END        &kp MINUS          &kp EQUAL
+&bootloader     &out OUT_TOG      &trans           &trans        &trans      &mkp MB5          &mmv MOVE_LEFT   &kp DEL        &kp LEFT     &kp DOWN       &kp RIGHT      &kp LEFT_BRACKET   &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &rgb_ug RGB_TOG   &rgb_ug RGB_EFR  &trans        &trans      &trans            &mmv MOVE_RIGHT  &kp CAPS       &kp PAGE_UP  &trans         &kp PAGE_DOWN  &trans             &kp RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_CONTROL  &kp LEFT_ALT     &kp LEFT_GUI  &trans      &trans            &mkp LCLK        &trans         &trans       &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
             display-name = "LAYER1";
@@ -69,8 +69,8 @@
 
         layer2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans      &trans     &trans       &trans
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &kp UNDER    &kp PLUS
 &trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
 &trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
