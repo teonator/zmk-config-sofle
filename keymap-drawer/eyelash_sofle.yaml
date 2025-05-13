@@ -110,7 +110,7 @@ layers:
   - RGB EFR
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&raise'
+  - RGB COLOR HSB(360,91,50)
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:apple-keyboard-caps$$
   - PgUp
