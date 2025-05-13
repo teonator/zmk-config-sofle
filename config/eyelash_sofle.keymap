@@ -39,15 +39,6 @@
     behaviors {
     };
 
-    macros {
-        raise: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(0,92,49) &mo 1>;
-            label = "NEW_MACRO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,11 +57,11 @@
 
         layer1 {
             bindings = <
-&studio_unlock  &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &mmv MOVE_UP     &trans         &trans       &trans         &trans         &trans             &trans
-&sys_reset      &ext_power EP_TOG  &mkp LCLK        &mkp MCLK     &mkp RCLK   &mkp MB4          &mmv MOVE_DOWN   &kp BACKSPACE  &kp HOME     &kp UP         &kp END        &kp MINUS          &kp EQUAL
-&bootloader     &out OUT_TOG       &trans           &trans        &trans      &mkp MB5          &mmv MOVE_LEFT   &kp DEL        &kp LEFT     &kp DOWN       &kp RIGHT      &kp LEFT_BRACKET   &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &rgb_ug RGB_TOG    &rgb_ug RGB_EFR  &trans        &trans      &raise            &mmv MOVE_RIGHT  &kp CAPS       &kp PAGE_UP  &trans         &kp PAGE_DOWN  &trans             &kp RIGHT_SHIFT
-&kp C_MUTE      &kp LEFT_CONTROL   &kp LEFT_ALT     &kp LEFT_GUI  &trans      &soft_off         &mkp LCLK        &trans         &trans       &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
+&studio_unlock  &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL                      &mmv MOVE_UP     &trans         &trans       &trans         &trans         &trans             &trans
+&sys_reset      &ext_power EP_TOG  &mkp LCLK        &mkp MCLK     &mkp RCLK   &mkp MB4                            &mmv MOVE_DOWN   &kp BACKSPACE  &kp HOME     &kp UP         &kp END        &kp MINUS          &kp EQUAL
+&bootloader     &out OUT_TOG       &trans           &trans        &trans      &mkp MB5                            &mmv MOVE_LEFT   &kp DEL        &kp LEFT     &kp DOWN       &kp RIGHT      &kp LEFT_BRACKET   &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &rgb_ug RGB_TOG    &rgb_ug RGB_EFR  &trans        &trans      &rgb_ug RGB_COLOR_HSB(360,91,50)    &mmv MOVE_RIGHT  &kp CAPS       &kp PAGE_UP  &trans         &kp PAGE_DOWN  &trans             &kp RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_CONTROL   &kp LEFT_ALT     &kp LEFT_GUI  &trans      &soft_off                           &mkp LCLK        &trans         &trans       &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
             display-name = "LAYER1";
