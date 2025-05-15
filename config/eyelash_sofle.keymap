@@ -17,7 +17,7 @@
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    time-to-max-speed-ms = <100>;     // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -37,15 +37,50 @@
     };
 
     behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+            flavor = "tap-preferred";
+        };
+
+        ltq: ltq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTQ";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+        };
+
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <135>;
+            quick-tap-ms = <0>;
+        };
+
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "RGB_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
     };
 
     macros {
-        test: test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 2 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(0,100,50)>;
-            label = "TEST";
-        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
     };
 
     keymap {
@@ -61,7 +96,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            label = "LAYER0";
         };
 
         layer1 {
@@ -73,8 +108,8 @@
 &kp C_MUTE      &kp LEFT_CONTROL   &kp LEFT_ALT     &kp LEFT_GUI  &trans      &soft_off         &mkp LCLK        &trans         &trans       &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
 
-            display-name = "LAYER1";
             sensor-bindings = <&scroll_encoder>;
+            label = "LAYER1";
         };
 
         layer2 {
