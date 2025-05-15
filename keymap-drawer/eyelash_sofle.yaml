@@ -195,3 +195,6 @@ layers:
   - RIGHT GUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
+combos:
+- p: [0, 1]
+  k: $$mdi:keyboard-esc$$
