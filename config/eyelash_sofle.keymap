@@ -84,6 +84,20 @@
         };
     };
 
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+
+        layer_1_listener {
+          layers = <1>;
+          bindings = <&underglow_set_rgb 255 0 0>;
+        };
+
+        layer_2_listener {
+          layers = <2>;
+          bindings = <&underglow_set_rgb 0 0 255>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
