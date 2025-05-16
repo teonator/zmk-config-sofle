@@ -84,26 +84,6 @@
         };
     };
 
-    layer_listeners {
-        compatible = "zmk,layer-listeners";
-
-        layer_1_listener {
-          layers = <1>;
-          bindings = <
-            &rgb_ug RGB_ON
-            &rgb_ug RGB_COLOR_HSB(255,0,0)
-          >;
-        };
-
-        layer_2_listener {
-          layers = <2>;
-          bindings = <
-            &rgb_ug RGB_ON
-            &rgb_ug RGB_COLOR_HSB(0,0,255)
-          >;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
