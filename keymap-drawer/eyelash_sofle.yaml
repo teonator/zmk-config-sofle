@@ -108,7 +108,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - RGB TOG
   - RGB EFR
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -179,7 +179,7 @@ layers:
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB BRD
   - RGB EFF
   - RGB TOG
   - $$mdi:apple-keyboard-shift$$
