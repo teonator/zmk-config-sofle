@@ -28,7 +28,7 @@ layers:
   - P
   - {t: \, s: '|'}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: LCTL}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: LGUI}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -38,7 +38,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: RGUI}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RCTL, s: ':'}
+  - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -54,7 +54,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
-  - LCTL
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LGUI
   - LAYER1
@@ -64,7 +64,7 @@ layers:
   - LAYER2
   - RGUI
   - $$mdi:apple-keyboard-option$$
-  - RCTL
+  - $$mdi:apple-keyboard-control$$
   LAYER1:
   - '&studio_unlock'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -198,3 +198,5 @@ layers:
 combos:
 - p: [0, 1]
   k: $$mdi:keyboard-esc$$
+- p: [11, 12]
+  k: {t: '$$mdi:backspace$$', type: backspace}
